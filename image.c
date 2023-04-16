@@ -4,9 +4,6 @@
 #include <string.h>
 #include "image.h"
 #include <pthread.h>
-#include <semaphore.h>
-
-#define MAX_THREADS 64
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -115,9 +112,11 @@ void convolute(Image* srcImage, Image* destImage, Matrix algorithm) {
 
     // we crate a loop to initialize all data as ThreadData objects and created the threads. 
     for(int i = 0; i < num_threads; i++ ){
+
         //the current index i will provide what range of rows that each thread will process.
         thread_data[i].start_row = i * row_per_thread;
         thread_data[i].end_row = (i + 1) * row_per_thread;
+
         //pass the image data to each thread and copy the algorithm matrix into the thread data for each thread
         thread_data[i].srcImage = srcImage;
         thread_data[i].destImage = destImage;
@@ -127,6 +126,7 @@ void convolute(Image* srcImage, Image* destImage, Matrix algorithm) {
         if(i == num_threads - 1) {
             thread_data[i].end_row += remaining_rows;
         }
+        //create a thread
         pthread_create(&threads[i], NULL, convolute_thread, &thread_data[i]);
     }
 
