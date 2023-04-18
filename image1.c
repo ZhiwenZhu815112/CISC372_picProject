@@ -3,7 +3,8 @@
 #include <time.h>
 #include <string.h>
 #include "image.h"
-#include </opt/homebrew/opt/libomp/include/omp.h>
+#include <omp.h>
+// #include </opt/homebrew/opt/libomp/include/omp.h>
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -60,9 +61,8 @@ uint8_t getPixelValue(Image* srcImage,int x,int y,int bit,Matrix algorithm){
 //Returns: Nothing
 void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
     int row,pix,bit,span;
-    
     #pragma omp parallel for collapse(3)
-    span=srcImage->bpp*srcImage->bpp;
+
     for (row=0;row<srcImage->height;row++){
         for (pix=0;pix<srcImage->width;pix++){
             for (bit=0;bit<srcImage->bpp;bit++){
