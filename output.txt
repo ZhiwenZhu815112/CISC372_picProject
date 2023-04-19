@@ -1,0 +1,17 @@
+Script started on Wed Apr 19 00:00:11 2023
+]0;zzw@r1n00.darwin:~/CISC372_picProject[?1034h[zzw@r1n00 CISC372_picProject]$ ./  original pic1.jpg edge
+Took 7 seconds
+]0;zzw@r1n00.darwin:~/CISC372_picProject[zzw@r1n00 CISC372_picProject]$ ./image_thread pic.jpg[1@1.jpg edge
+Took 6 seconds
+]0;zzw@r1n00.darwin:~/CISC372_picProject[zzw@r1n00 CISC372_picProject]$ ./image_omp pic1.jpg edge
+Took 6 seconds
+]0;zzw@r1n00.darwin:~/CISC372_picProject[zzw@r1n00 CISC372_picProject]$ srun ./original pic1.jpg edge
+Took 7 seconds
+]0;zzw@r1n00.darwin:~/CISC372_picProject[zzw@r1n00 CISC372_picProject]$ su run ./image_thread pic1.jpg edge
+Took 7 seconds
+]0;zzw@r1n00.darwin:~/CISC372_picProject[zzw@r1n00 CISC372_picProject]$ srun ./image_omp pic1.jpg edge
+Took 7 seconds
+]0;zzw@r1n00.darwin:~/CISC372_picProject[zzw@r1n00 CISC372_picProject]$ exit
+exit
+
+Script done on Wed Apr 19 00:03:44 2023
