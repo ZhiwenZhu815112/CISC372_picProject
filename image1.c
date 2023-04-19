@@ -132,7 +132,7 @@ void convolute(Image* srcImage, Image* destImage, Matrix algorithm) {
     }
 
     //we pthread_join to wait for all threads finish its job.
-    for(int i = 0; i < num_threads; i++){
+    for(i = 0; i < num_threads; i++){
         pthread_join(threads[i], NULL);
     }
 

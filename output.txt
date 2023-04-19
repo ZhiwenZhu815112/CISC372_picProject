@@ -1,0 +1,9 @@
+Script started on Tue Apr 18 23:09:30 2023
+]0;zzw@r1n00.darwin:~/CISC372_picProject[?1034h[zzw@r1n00 CISC372_picProject]$ srun ./image_thread pic1.jpg edge
+Took 6 seconds
+]0;zzw@r1n00.darwin:~/CISC372_picProject[zzw@r1n00 CISC372_picProject]$ srun ./image_thread pic1.jpg edged[1P[1P[1P[1P[1P[1P[1@o[1@m[1@p pic1.jpg edge
+Took 7 seconds
+]0;zzw@r1n00.darwin:~/CISC372_picProject[zzw@r1n00 CISC372_picProject]$ xit   exit
+exit
+
+Script done on Tue Apr 18 23:11:07 2023
