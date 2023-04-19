@@ -14,8 +14,16 @@ gcc image1.c -lpthread -o image_thread -lm  -- for pthread
 
 gcc image2.c -fopenmp -o image_omp -lm  -- for openmp
 
-if you choose compile openmp os Mac Os
 
+execute command example:
+
+./image_thread pic1.jpg edge
+
+or emboss etc..
+
+
+
+if you choose compile openmp os Mac Os
 
 please install llvm with libomp via brew 
 
