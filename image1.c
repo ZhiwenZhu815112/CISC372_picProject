@@ -111,7 +111,8 @@ void convolute(Image* srcImage, Image* destImage, Matrix algorithm) {
     int remaining_rows = srcImage->height % num_threads; // using module to know the remainning row that we need to be assigned 
 
     // we crate a loop to initialize all data as ThreadData objects and created the threads. 
-    for(int i = 0; i < num_threads; i++ ){
+    int i = 0;
+    for(i = 0; i < num_threads; i++ ){
 
         //the current index i will provide what range of rows that each thread will process.
         thread_data[i].start_row = i * row_per_thread;
